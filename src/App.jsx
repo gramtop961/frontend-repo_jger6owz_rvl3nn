@@ -14,7 +14,7 @@ function App() {
   ]
 
   return (
-    <div className="min-h-screen w-full bg-black text-white">
+    <div className="min-h-screen w-full bg-white text-slate-900">
       <Hero />
       <Vision images={visionImages} />
       <Achievements />

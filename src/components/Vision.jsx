@@ -8,14 +8,14 @@ export default function Vision({ images = [] }) {
   }
 
   return (
-    <section id="vision" className="relative w-full bg-gradient-to-b from-black via-[#050b16] to-black py-20 text-white">
+    <section id="vision" className="relative w-full bg-gradient-to-b from-white via-slate-50 to-white py-20 text-slate-900">
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="text-center text-3xl sm:text-5xl font-extrabold tracking-tight">
-          <span className="bg-clip-text text-transparent bg-[linear-gradient(135deg,#93c5fd_0%,#38bdf8_50%,#22d3ee_100%)]">
+          <span className="bg-clip-text text-transparent bg-[linear-gradient(135deg,#0f172a_0%,#334155_40%,#64748b_100%)]">
             Our Vision
           </span>
         </h2>
-        <p className="mx-auto mt-4 max-w-3xl text-center text-blue-100/90">
+        <p className="mx-auto mt-4 max-w-3xl text-center text-slate-600">
           To nurture every student with excellence, moral strength, and divine inspiration drawn from the teachings of Swami Vivekananda, Swami Ramkrishna Paramhans, and Maa Sharda Devi.
         </p>
 
@@ -28,12 +28,12 @@ export default function Vision({ images = [] }) {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.3 }}
-              className="group relative overflow-hidden rounded-2xl border border-blue-500/20 bg-white/5 p-3 backdrop-blur transition hover:border-blue-400/40"
+              className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-3 shadow transition hover:shadow-md"
             >
               <div className="aspect-square w-full overflow-hidden rounded-xl">
                 <img src={src} alt="Visionary" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
               </div>
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-transparent" />
             </motion.div>
           ))}
         </div>
