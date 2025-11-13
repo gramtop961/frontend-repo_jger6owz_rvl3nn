@@ -15,32 +15,37 @@
   html {
     font-family: var(--font-sans);
     font-feature-settings: "rlig" 1, "calt" 1;
+    scroll-behavior: smooth;
+    background: #000;
   }
 
   body {
-    @apply antialiased;
+    @apply antialiased bg-black text-white;
   }
 }
 
-/* Custom utility classes for shadcn/ui patterns */
+/* Custom utilities and animations */
 @layer utilities {
-  .animate-in {
-    animation-name: animateIn;
-    animation-duration: 350ms;
-    --tw-enter-opacity: initial;
-    --tw-enter-scale: initial;
-    --tw-enter-rotate: initial;
-    --tw-enter-translate-x: initial;
-    --tw-enter-translate-y: initial;
+  .neon-soft {
+    text-shadow: 0 0 6px rgba(59,130,246,0.6), 0 0 18px rgba(56,189,248,0.35);
   }
 
-  .animate-out {
-    animation-name: animateOut;
-    animation-duration: 350ms;
-    --tw-exit-opacity: initial;
-    --tw-exit-scale: initial;
-    --tw-exit-rotate: initial;
-    --tw-exit-translate-x: initial;
-    --tw-exit-translate-y: initial;
+  .animate-pulseSlow { animation: pulseSlow 4s ease-in-out infinite; }
+  .animate-float { animation: float 8s ease-in-out infinite; }
+
+  @keyframes pulseSlow {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.06); opacity: 1; }
   }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+
+  /* Optional nice thin scrollbar for horizontal cards */
+  .scrollbar-thin { scrollbar-width: thin; }
+  .scrollbar-thumb-blue-700\/50::-webkit-scrollbar { height: 8px; }
+  .scrollbar-thumb-blue-700\/50::-webkit-scrollbar-thumb { background: rgba(29,78,216,0.5); border-radius: 9999px; }
 }
